@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+//import './sass/app.scss'
+import './App.css'
+import TopSection from './components/top/index'
+import BottomSection from './components/bottom/index'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+
+  render(){
+    return(
+     <div className='app-container'>
+        <div className='main-container'>
+          
+          <div className='top-section'><TopSection /></div>
+          <div className='bottom-section'><BottomSection /></div>
+        </div>
+     </div> 
+    )
+  }
 }
 
-export default App;
+export default App
+
